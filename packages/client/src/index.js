@@ -8,6 +8,7 @@ import DockMonitor from 'redux-devtools-dock-monitor';
 import { modules, requestLogin, login } from 'common';
 import App from './App';
 
+//
 const DevTools = createDevTools(
   <DockMonitor
     toggleVisibilityKey='ctrl-y'
