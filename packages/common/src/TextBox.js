@@ -6,5 +6,6 @@ const TextBox = ({ children }) => (
     { children }
   </div>
 );
+console.log('common modify')
 
 export default TextBox;
