@@ -1,6 +1,6 @@
 {
   "name": "lernademo-admin",
-  "version": "1.5.1",
+  "version": "1.5.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lernademo-common": "^1.5.1",
+    "lernademo-common": "^1.5.3",
     "react": "16.3.2",
     "react-dom": "16.3.2",
     "react-redux": "5.0.7",
