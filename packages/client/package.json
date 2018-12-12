@@ -1,6 +1,5 @@
 {
-  "name": "client",
-  "private": true,
+  "name": "lernademo-client",
   "version": "1.5.0",
   "description": "",
   "main": "index.js",
@@ -11,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "common": "^1.5.0",
+    "lernademo-common": "^1.5.0",
     "react": "16.3.2",
     "react-dom": "16.3.2",
     "react-redux": "5.0.7",
