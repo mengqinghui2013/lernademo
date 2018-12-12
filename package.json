@@ -1,18 +1,51 @@
 {
+  "name": "lernademo",
   "devDependencies": {
-    "chalk": "^2.4.0",
-    "express": "^4.16.3",
-    "identity-obj-proxy": "^3.0.0",
-    "lerna": "^3.5.0"
+    "@commitlint/cli": "^6.1.3",
+    "@commitlint/config-conventional": "^6.1.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-plugin-transform-vue-jsx": "^3.7.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-1": "^6.24.1",
+    "commitizen": "^2.9.6",
+    "css-loader": "^0.28.7",
+    "cz-lerna-changelog": "^1.2.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-html": "^4.0.3",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1",
+    "eslint-plugin-vue": "^4.5.0",
+    "husky": "^0.14.3",
+    "lerna": "^3.5.0",
+    "lerna-semantic-release": "^9.1.0",
+    "lint-staged": "^7.0.4",
+    "prettier": "^1.11.1"
   },
   "scripts": {
-    "postinstall": "lerna bootstrap --hoist",
-    "start": "node ./server",
-    "test": "jest"
+    "ct": "git-cz",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "release": "lerna publish --conventional-commits"
   },
-  "dependencies": {
-    "jest": "^22.4.3",
-    "react-test-renderer": "^16.3.2"
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-lerna-changelog"
+    }
   },
-  "name": "lernademo"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "packages/**.vue": [
+      "eslint",
+      "prettier --write",
+      "git add"
+    ]
+  }
 }
