@@ -10,4 +10,6 @@ const App = () => (
   </div>
 );
 
+console.log('app.js modify')
+
 export default App;
