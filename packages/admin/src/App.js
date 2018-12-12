@@ -2,6 +2,7 @@ import { Notification } from 'common';
 import React from 'react';
 import Title from './Title';
 
+///weweweewe
 const App = () => (
     <div>
         <h1>Admin App!</h1>
