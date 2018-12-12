@@ -47,5 +47,8 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "dependencies": {
+    "git-cz": "^1.8.0"
   }
 }
